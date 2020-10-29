@@ -29,5 +29,11 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        let fruitsSansDoublons = new Set(fruits);
+        console.log(fruitsSansDoublons);
+    })
+    
+
 
 })();

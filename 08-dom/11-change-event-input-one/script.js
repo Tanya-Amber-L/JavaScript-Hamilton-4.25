@@ -12,5 +12,20 @@
 (function() {
 
     // your code here
+    let password = document.getElementById("pass-one");
+    let compteur = document.getElementById("counter");
 
+    password.addEventListener("input", function() {
+
+        if (password.value.length <= 10) {
+            compteur.innerHTML = password.value.length + "/10";
+        }
+
+        else {
+            password.value = password.value.slice(0, 10);
+        }
+
+    })
+
+    
 })();

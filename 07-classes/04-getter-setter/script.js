@@ -11,4 +11,30 @@
 
 (() => {
     // your code here
+    class Person {
+        constructor(firstname, lastname) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+
+        get name() {
+            return this.firstname + " " + this.lastname;
+        }
+
+        set name(newName) {
+            [this.firstname, this.lastname] = newName.split(" ");
+        }
+
+    }
+
+    document.getElementById("run").addEventListener("click", function() {
+        let person1 = new Person("Tanya", "Leenders");
+        console.log(person1);
+
+        person1.name = "Scarlett Johansson";
+        console.log(person1);
+    })
+    
+    
+    
 })();

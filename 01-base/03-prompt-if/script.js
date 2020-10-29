@@ -13,4 +13,14 @@
 
   // your code here
 
+  var WantCake = prompt ("Do you want some cake?");
+
+  if (WantCake == "yes") {
+    alert ("Great! Here it is")
+  }
+
+  else {
+    alert ("More cake for me then!")
+  }
+
 })();

@@ -13,4 +13,8 @@
 
     // your code here
 
+    var name = prompt ("What's your name? ");
+    alert ("I hate you " + name + ". No I'm joking!");
+    
+
 })();

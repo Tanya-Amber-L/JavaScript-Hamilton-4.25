@@ -90,5 +90,18 @@
     ];
 
     // your code here
+    let Ages = [];
 
+    document.getElementById("run").addEventListener("click", function() {
+        
+        people.forEach(gens => Ages.push(gens["age"]));
+
+        let sommeAges = Ages.reduce(
+            (a, b) => a + b
+        );
+
+        console.log(sommeAges);
+    });
+    
+    
 })();

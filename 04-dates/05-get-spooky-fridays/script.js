@@ -11,6 +11,46 @@
 
 (function() {
 
-    // your code here
+    
+// your code here
+    let nombreMois = [];
+    let monthlist = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ];
 
+    
+
+    function MoisVendredi13(){
+
+        let year = document.getElementById("year").value;
+
+        for (let i=0; i<12; i++) {
+           let date = new Date(year, i, 13);
+           if (date.getDay() == 5 ) {
+               nombreMois.push(monthlist[i]);
+           } 
+        }
+        return nombreMois;
+    }
+    
+    document.getElementById("run").addEventListener ("click", function() {
+
+        MoisVendredi13();
+        alert(nombreMois);
+        nombreMois.length = 0;
+    });
+
+    
+    
 })();

@@ -27,4 +27,40 @@
         user: null,
     };
     // your code here
+
+    document.getElementById("run").addEventListener("click", function() {
+
+        computers.forEach (ordis => {
+            
+            if (computers.hasOwnProperty("available") == false) {
+                ordis = Object.defineProperty(ordis, "available", {value : true})
+            }
+
+            if (computers.hasOwnProperty("os") == false) {
+                ordis = Object.defineProperty(ordis, "os", {value : "linux"})
+            }
+
+            if (computers.hasOwnProperty("user") == false) {
+                ordis = Object.defineProperty(ordis, "user", {value : null})
+            }
+        })
+
+        console.log(computers);
+    })
+
+
+    // ALTERNATIVE 
+    // document.getElementById("run").addEventListener("click", function() {
+
+    //     computers.forEach((computer) => {
+    //         computer.user = computer.user || defaultProps.user;
+    //         computer.os = computer.os || defaultProps.os;
+    //         computer.available = computer.available || defaultProps.available;
+
+    //         console.table(computer);
+
+    //     });
+
+    // })
+
 })();

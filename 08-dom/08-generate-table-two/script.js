@@ -12,5 +12,19 @@
 (function() {
 
     // your code here
+    let divParent = document.getElementById("target");
+    let newTable = document.createElement("table");
 
+    divParent.prepend(newTable);  //ajouter table sous le div 
+
+    for (let i = 1; i < 11; i++) {
+        let newRow = document.createElement("tr");
+        newTable.append(newRow);
+
+        for (let j = 1; j < 11; j++) {
+            let newColumn = document.createElement("td");
+            newColumn.innerHTML = i +  "x" + j + "=" + i*j;
+            newRow.append(newColumn);
+        }
+    }
 })();

@@ -12,5 +12,12 @@
 (function() {
 
     // your code here
+    let valeurDataImage = document.getElementById("source").getAttribute("data-image");
+    let elementParent = document.getElementById("target");
+    let newImage = document.createElement("img");
+    newImage.setAttribute("src", valeurDataImage)
+
+    // prendre le parent. mot clé prepend(element créé) - pour l'ajouter comme premier enfant 
+    elementParent.prepend(newImage);
 
 })();

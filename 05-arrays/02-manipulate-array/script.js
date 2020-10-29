@@ -26,4 +26,15 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener ("click", function (){
+        let first = fruits.shift();
+        let last = fruits.pop();
+
+        let newFirst = fruits.unshift("banana");
+        let newLast = fruits.push("kiwi");
+        console.log(fruits);
+    })
+    
+    
+
 })();

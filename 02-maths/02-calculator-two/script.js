@@ -14,6 +14,26 @@
 
     const performOperation = operation => {
         // perform the operation
+        let a = document.getElementById ("op-one").value;
+        let b = document.getElementById ("op-two").value;
+
+        switch (operation) {
+            case "addition":
+                alert (Number(a) + Number(b));
+                break;
+            case "substraction":
+                alert (Number(a) - Number(b));
+                break;
+            case "multiplication":
+                alert (Number(a) * Number(b));
+                break;
+            case "division":
+                alert (Number(a) * Number(b));
+                break;
+            default:
+                alert("error")
+                break;
+        }
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>

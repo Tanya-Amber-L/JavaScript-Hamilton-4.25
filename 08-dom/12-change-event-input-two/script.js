@@ -12,5 +12,19 @@
 (function() {
 
     // your code here
+    let password = document.getElementById("pass-one");
+    let validation = document.getElementById("validity");
+
+    password.addEventListener("input", function() {
+        let passLength = password.value.length;
+        let numbers = password.value.replace(/[^0-9]/g,"").length;
+
+        if (passLength >= 8 && numbers >= 2) {
+            validation.innerHTML = "Ok !";
+        }
+        else {
+            validation.innerHTML = "Not ok";
+        }
+    })
 
 })();

@@ -90,5 +90,8 @@
     ];
 
     // your code here
-
+    document.getElementById("run").addEventListener("click", function() {
+        let moreThan18 = people.filter(gens => gens ["age"] > 18);
+        console.log(moreThan18);
+    })
 })();

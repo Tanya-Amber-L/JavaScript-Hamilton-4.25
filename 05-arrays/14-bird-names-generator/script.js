@@ -39,4 +39,23 @@
     ]);
 
     // your code here
+    let RandomBird = Math.floor(Math.random() * birds.length);
+    let RandomAdjectives = Math.floor(Math.random() * adjectives.size);
+
+
+    let birdName = birds[RandomBird].name;
+    let adjectiveTableau = [...adjectives];
+    let adjectiveName = adjectiveTableau[RandomAdjectives];
+
+
+    document.getElementById("run").addEventListener("click", function() {
+        
+        if (birds[RandomBird].fem == true) {
+            document.getElementById("target").innerHTML = "La " + birdName + " " + adjectiveName + "e";
+        }
+        else {
+            document.getElementById("target").innerHTML = "Le " + birdName + " " + adjectiveName;
+        }
+
+    })
 })();

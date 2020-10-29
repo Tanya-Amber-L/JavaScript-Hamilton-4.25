@@ -15,6 +15,10 @@
 
         // your code here
 
+    let n=4;
+    for (let n=1; n<=4; n++) {
+        alert (n * n);
+    }
     });
 
 })();

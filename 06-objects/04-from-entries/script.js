@@ -13,4 +13,17 @@
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     // your code here
+
+    let tableau = []
+    for (i=0; i<5; i++) {
+        tableau.push([keys[i], values[i]]);
+    }
+
+    let map= new Map([...tableau]);
+    let items = Object.fromEntries(map);
+
+    document.getElementById("run").addEventListener("click", function() {
+        console.log(items);
+    });
+
 })();

@@ -12,5 +12,23 @@
 (function() {
 
     // your code here
+    let newText = "Nananère j'ai changé le texte HAHAHAHA !!! " + 
+                "J'ai réussi à faire l'effet TypeWriter Waooow";
+    let oldText = document.getElementById("target");
+    
+    oldText.innerHTML = newText;
+
+    let i = 0;
+    function TypeWriter() {
+
+        if (i < newText.length) {
+            newText.innerHTML = newText.charAt(i);
+            i++;
+            setTimeout(TypeWriter, 30);
+        }
+
+    }
+   
+    
 
 })();
