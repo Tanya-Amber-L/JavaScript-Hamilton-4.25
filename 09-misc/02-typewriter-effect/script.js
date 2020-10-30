@@ -12,23 +12,29 @@
 (function() {
 
     // your code here
-    let newText = "Nananère j'ai changé le texte HAHAHAHA !!! " + 
-                "J'ai réussi à faire l'effet TypeWriter Waooow";
-    let oldText = document.getElementById("target");
+    let newText = "Bon je pense que j'ai réussi à changer le texte. Génial !!! "
+
+    let target = document.getElementById("target");
     
-    oldText.innerHTML = newText;
+    target.innerHTML = newText;
+
+    let text = [...target.innerText].map(x => `<span>${x}</span>`).join("");
+
+    target.innerHTML = text;
+
+    target.style.visibility = "hidden";
 
     let i = 0;
-    function TypeWriter() {
 
-        if (i < newText.length) {
-            newText.innerHTML = newText.charAt(i);
-            i++;
-            setTimeout(TypeWriter, 30);
-        }
-
-    }
-   
+    const interval = setInterval(revealLetter, 100);
     
+    function revealLetter(){
 
+        target.childNodes[i++].style.visibility = "visible";
+
+        if (i >= target.childNodes.length) {
+            clearInterval(interval);
+        }
+    }
+    
 })();

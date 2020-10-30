@@ -12,5 +12,41 @@
 (function() {
 
     // your code here
+    let target = document.getElementById("target");
+    let partOne = document.getElementById("part-one");
+    let partTwo = document.getElementById("part-two");
+    let partThree = document.getElementById("part-three");
+    let partFour = document.getElementById("part-four");
+
+    let a = 460;
+    let b = 00;
+    let c = 00;
+    let d = 00;
+
+    function createPhoneNumberByClick() {
+      partOne.onclick = function() {
+        a++;
+        let partOneModified = partOne.innerHTML = a;
+      }
+
+    partTwo.onclick = function() {
+        b++;
+        let partTwoModified = partTwo.innerHTML = b;
+      }
+
+    partThree.onclick = function() {
+        c++;
+        let partThreeModified = partThree.innerHTML = c;
+      }
+
+    partFour.onclick = function() {
+        d++;
+        let partFourModified = partFour.innerHTML = d;
+      }
+    
+    target.innerHTML = "0" + partOneModified + partTwoModified + partThreeModified + partFourModified;
+    }
+    
+    createPhoneNumberByClick();
 
 })();
