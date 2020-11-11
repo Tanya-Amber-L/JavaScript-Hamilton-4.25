@@ -26,6 +26,7 @@
 
     for (i = 1; i < 11; i++) {
         let newRow = document.createElement("tr");
+        newRow.innerHTML = i;
         newColumn.prepend(newRow);
     }
     

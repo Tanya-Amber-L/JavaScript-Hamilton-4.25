@@ -96,8 +96,6 @@
                     console.log(gens["email"]);
                 }
             })
-        
-        
     })
 
 })();

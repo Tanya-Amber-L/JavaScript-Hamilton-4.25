@@ -19,7 +19,6 @@
         let numbers = document.getElementById("numbers").value;
         let tableau = numbers.split(",");
         alert (tableau.sort((a,b)=>a-b));
-
     });
 
 })();

@@ -42,4 +42,5 @@
             () => (performOperation($btn.id), false),
         ),
     );
+    //tableau qui contient tous les boutons avec le meme ID, puis fonction sur chaque bouton
 })();

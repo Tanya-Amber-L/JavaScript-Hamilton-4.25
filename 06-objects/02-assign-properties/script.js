@@ -50,17 +50,24 @@
 
 
     // ALTERNATIVE 
-    // document.getElementById("run").addEventListener("click", function() {
-
     //     computers.forEach((computer) => {
     //         computer.user = computer.user || defaultProps.user;
     //         computer.os = computer.os || defaultProps.os;
     //         computer.available = computer.available || defaultProps.available;
 
     //         console.table(computer);
-
     //     });
 
-    // })
+    // ALTERNATIVE 2
+    //     console.table(
+    //         computers.map(computer =>({
+    //             ...defaultProps,
+    //             ...computer,                
+    //         }))
+    //     )
+
+
+
+
 
 })();

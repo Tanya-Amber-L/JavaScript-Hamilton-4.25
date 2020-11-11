@@ -14,20 +14,20 @@
     // your code here
 
 while (true) {   
-    
-    var age = prompt ("How old are you?");
+    let age = prompt ("How old are you?");
 
-    var gender = prompt ("Ok. Male or female?");
+    let gender = prompt ("Ok. Male or female?");
 
-    var town = prompt ("Where do you live?");
+    let town = prompt ("Where do you live?");
 
     alert ("So, you are " + age + ", You're a " + gender + " and you live in " + town);
 
-    var confirm = prompt ("Correct? Yes or no?")
+    let confirm = prompt ("Correct? Yes or no?")
 
     if (confirm === "yes") {
         break
     }
-
 } 
+
+// ou: créer une fonction qui va s'auto rappeler, tant que non confirmé
 })();

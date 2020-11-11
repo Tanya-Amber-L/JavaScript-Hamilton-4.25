@@ -37,5 +37,5 @@
         alert (Number(a) / Number(b));
 
     });
-
+// a la place de Number, utliser parseInt.documetn.get... ou +document.get...
 })();

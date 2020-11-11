@@ -12,7 +12,7 @@
 (function() {
 
     // your code here
-    let randomNumber = Math.floor(Math.random() * 100);
+    let randomNumber = Math.ceil(Math.random() * 100);
     
     function guessTheNumber() {
         let i = 1

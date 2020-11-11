@@ -32,12 +32,10 @@
     
 
     function MoisVendredi13(){
-
         let year = document.getElementById("year").value;
-
         for (let i=0; i<12; i++) {
            let date = new Date(year, i, 13);
-           if (date.getDay() == 5 ) {
+           if (date.getDay() === 5 ) {
                nombreMois.push(monthlist[i]);
            } 
         }
@@ -45,7 +43,6 @@
     }
     
     document.getElementById("run").addEventListener ("click", function() {
-
         MoisVendredi13();
         alert(nombreMois);
         nombreMois.length = 0;

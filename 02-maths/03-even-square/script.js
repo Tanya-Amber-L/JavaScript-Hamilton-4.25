@@ -14,11 +14,16 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-
     let n=4;
-    for (let n=1; n<=4; n++) {
-        alert (n * n);
+    let results = []
+
+    while (n <= 21) {
+        results.push(Math.pow(n ** 2));
+        n =+ 2;
     }
+
+    alert(results);
+
     });
 
 })();

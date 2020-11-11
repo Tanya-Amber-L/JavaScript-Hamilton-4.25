@@ -18,35 +18,61 @@
     let partThree = document.getElementById("part-three");
     let partFour = document.getElementById("part-four");
 
-    let a = 460;
-    let b = 00;
-    let c = 00;
-    let d = 00;
+    let result = [];
+    result.length = 4;
 
-    function createPhoneNumberByClick() {
-      partOne.onclick = function() {
+    let a = 459;
+    let b = -1;
+    let c = -1;
+    let d = -1;
+
+    partOne.onclick = function() {
         a++;
-        let partOneModified = partOne.innerHTML = a;
+        partOne.innerHTML = a;
+        target.innerHTML = result;
+        if (a >= 499) {
+          a = 459;
+        }
+        result[0] = a;
       }
 
     partTwo.onclick = function() {
         b++;
-        let partTwoModified = partTwo.innerHTML = b;
+        partTwo.innerHTML = b;
+        target.innerHTML = result;
+        if (b < 10) {
+          b = `0${b}`
+        }
+        else if (b >= 99) {
+          b = -1;
+        }
+        result[1] = b;
       }
 
     partThree.onclick = function() {
-        c++;
-        let partThreeModified = partThree.innerHTML = c;
+      c++;
+      partThree.innerHTML = c;
+      target.innerHTML = result;
+      if (c < 10) {
+        c = `0${c}`
+      }
+      else if (c >= 99) {
+        c = -1;
+      }
+      result[2] = c;
       }
 
     partFour.onclick = function() {
-        d++;
-        let partFourModified = partFour.innerHTML = d;
+      d++;
+      partFour.innerHTML = d;
+      target.innerHTML = result;
+      if (d < 10) {
+        d = `0${d}`
       }
-    
-    target.innerHTML = "0" + partOneModified + partTwoModified + partThreeModified + partFourModified;
-    }
-    
-    createPhoneNumberByClick();
+      else if (d >= 99) {
+        d = -1;
+      }
+      result[3] = d;
+      }
 
 })();

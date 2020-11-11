@@ -18,8 +18,8 @@
     }
     // your code here
     document.getElementById("run").addEventListener("click", function () {
-        let firstCat = new Cat("Skitty", 9);
-        let secondCat = new Cat("Pixel", 6);
+        const firstCat = new Cat("Skitty", 9);
+        const secondCat = new Cat("Pixel", 6);
         console.log(firstCat, secondCat);
     });
     

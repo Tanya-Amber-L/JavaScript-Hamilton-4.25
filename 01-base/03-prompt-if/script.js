@@ -13,7 +13,7 @@
 
   // your code here
 
-  var WantCake = prompt ("Do you want some cake?");
+  const WantCake = prompt ("Do you want some cake?");
 
   if (WantCake == "yes") {
     alert ("Great! Here it is")
@@ -22,5 +22,14 @@
   else {
     alert ("More cake for me then!")
   }
+
+  // ou
+  // const WantCake = confirm ("Do you want some cake?");
+
+  // alert(
+  //   WantCake:
+  //   ?("Great! Here it is")
+  //   :("More cake for me then!")
+  // )
 
 })();

@@ -34,6 +34,14 @@
         else {
             console.log("no");
         }
+
+        // ou:
+        // if (fruits.includes(Element => "apple")) {
+        //     console.log("yes");
+        // }
+        // else {
+        //     console.log("no");
+        // }
     })
 
 })();

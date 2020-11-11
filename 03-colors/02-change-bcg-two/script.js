@@ -15,7 +15,7 @@
     let couleur = document.getElementById("color").value;
     let bouton = document.getElementById("run");
 
-    bouton.addEventListener ("click", function () {
+    bouton.addEventListener("click", function () {
         document.body.style.background = couleur;
     })
 

@@ -102,6 +102,4 @@
 
         console.log(sommeAges);
     });
-    
-    
 })();

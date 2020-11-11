@@ -12,9 +12,5 @@
 (function() {
 
     // your code here
-    let elements = document.querySelectorAll(".target");
-    for (i = 0; i < elements.length; i++) {
-        elements[i].innerHTML = "owned";
-    };
-
+    document.querySelectorAll(".target").forEach(x => x.innerHTML = "owned");
 })();

@@ -18,7 +18,4 @@
     bouton.addEventListener ("click", function () {
         document.body.style.background = couleur;
     })
-
-
-
 })();

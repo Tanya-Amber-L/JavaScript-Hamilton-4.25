@@ -27,11 +27,11 @@
     // your code here
 
     document.getElementById("run").addEventListener ("click", function (){
-        let first = fruits.shift();
-        let last = fruits.pop();
+        let first = fruits.shift(); //enleve le premier
+        let last = fruits.pop(); // enleve le dernier
 
-        let newFirst = fruits.unshift("banana");
-        let newLast = fruits.push("kiwi");
+        let newFirst = fruits.unshift("banana"); //ajout au début
+        let newLast = fruits.push("kiwi"); //ajout à la fin
         console.log(fruits);
     })
     

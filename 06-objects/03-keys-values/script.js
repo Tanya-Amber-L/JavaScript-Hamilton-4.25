@@ -21,11 +21,8 @@
 
     // your code here
     document.getElementById("run").addEventListener("click", function() {
-        let personKeys = Object.keys(person);
-        let personValues = Object.values(person);
-
-        personKeys.forEach(item => console.log(item));
-        personValues.forEach(item => console.log(item));
+        console.log(Object.keys(person));
+        console.log(Object.values(person));
     });
     
 })();

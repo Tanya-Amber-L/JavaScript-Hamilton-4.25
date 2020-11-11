@@ -21,16 +21,16 @@
             super();
             this.name = name;
         }
-        static greeting = "WOOF WOOF"; 
     }
+    Dog.greeting = "WOOF WOOF"; 
 
     class Cat extends Animal {
         constructor(name) {
             super();
             this.name =  name;
         }
-        static greeting = "MIAOUUUUUU"
     }
+    Cat.greeting = "MIAOUUUUUU";
 
     document.getElementById("run").addEventListener("click", function() {
         let chien = new Dog("Auban");
