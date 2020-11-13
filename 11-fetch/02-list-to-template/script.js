@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let name = document.querySelector(".name");
+    let alterEgo = document.querySelector(".alter-ego");
+    let powers = document.querySelector(".powers");
+    let template = document.querySelector("#tpl-hero")
+    document.getElementById("run").addEventListener("click", () => {
+        fetch('http://localhost:3000/heroes')
+        .then(response => response.json())
+        .then(dataXMen => forEach(dataXMen => {
+            let clone =  document.importNode(template.content, true);
+            let 
+        }););
+    })
 })();
