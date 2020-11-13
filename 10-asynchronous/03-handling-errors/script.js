@@ -11,11 +11,11 @@
 
 (() => {
     document.getElementById("run").addEventListener("click", () => {
-        window.lib.getPersons((error, people.array) => {
+        window.lib.getPersons((error, persons) => {
             if (error) {
-                console.log(error);
+                console.error(error);
             } else {
-                console.log(people.array);
+                console.log(persons);
             }
         })
     })

@@ -14,20 +14,21 @@
         let i = 0;
         window.lib.getPosts((error, posts) => {
             if (error) {
-                console.log(error);
+                console.error(error);
             } else {
-                posts.forEach(posts => {
-                    window.lib.getComments(posts.id , (error, comments) => {
+                posts.forEach(post => {
+                    window.lib.getComments(post.id , (error, comments) => {
                         if (error) {
-                            console.log(error);
-                        } else {
-                            posts.comments = comments;
+                            console.error(error);
+                        } 
+                        else {
+                            post.comments = comments;
                         }
                         if (++i === posts.length) {
                             console.log(posts);
                         }
-                    }
-                })
+                    });
+                });
             }
         });
     })

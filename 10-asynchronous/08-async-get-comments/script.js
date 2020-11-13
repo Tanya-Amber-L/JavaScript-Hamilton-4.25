@@ -10,5 +10,28 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    async function promiseGetPosts() {
+        const posts = await window.lib.getPosts();
+        try {
+            posts.forEach((post) => {
+                post.comment = promiseGetComments(post.id);
+            });
+            console.log(posts);
+        } catch(error) {
+            console.error(error);
+        }
+    }
+
+    async function promiseGetComments(postID) {
+        const comments = await window.lib.getComments(postID);
+        try {
+            return comments.value;
+        } catch(error) {
+            console.error(error);
+        }
+    }
+
+    document.getElementById("run").addEventListener("click", () => {
+        promiseGetPosts();
+    })
 })();
