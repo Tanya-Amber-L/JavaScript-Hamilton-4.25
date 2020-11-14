@@ -13,13 +13,17 @@
     let name = document.querySelector(".name");
     let alterEgo = document.querySelector(".alter-ego");
     let powers = document.querySelector(".powers");
-    let template = document.querySelector("#tpl-hero")
+    let template = document.querySelector("#tpl-hero");
+    let target = document.querySelector("#target");
     document.getElementById("run").addEventListener("click", () => {
         fetch('http://localhost:3000/heroes')
         .then(response => response.json())
         .then(dataXMen => forEach(dataXMen => {
             let clone =  document.importNode(template.content, true);
-            let 
-        }););
+            name.textContent = dataXMen.name;
+            alterEgo.textContent = dataXMen.alterEgo;
+            powers.textContent = dataXMen.abilities;
+            target.appendChild(clone);
+        }));
     })
 })();
