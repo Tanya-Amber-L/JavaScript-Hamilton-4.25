@@ -10,28 +10,43 @@
 // You will have time to focus on it later.
 
 (() => {
-    async function promiseGetPosts() {
-        const posts = await window.lib.getPosts();
-        try {
-            posts.forEach((post) => {
-                post.comment = promiseGetComments(post.id);
-            });
-            console.log(posts);
-        } catch(error) {
-            console.error(error);
-        }
-    }
+    //METHODE LENY
+    document.getElementById("run").addEventListener("click", async() => {
+        let posts= await window.lib.getPosts();
+        const comments = await Promise.all(
+            posts.map(post=>window.lib.getComments(postID))
+        );
 
-    async function promiseGetComments(postID) {
-        const comments = await window.lib.getComments(postID);
-        try {
-            return comments.value;
-        } catch(error) {
-            console.error(error);
-        }
-    }
+        comments.forEach((comments, i) => {
+            posts[i].comments = comments;
+        })
 
-    document.getElementById("run").addEventListener("click", () => {
-        promiseGetPosts();
+        console.log(posts)
     })
+
+    // MA METHODE
+    // async function promiseGetPosts() {
+    //     const posts = await window.lib.getPosts();
+    //     try {
+    //         posts.forEach((post) => {
+    //             post.comment = promiseGetComments(post.id);
+    //         });
+    //         console.log(posts);
+    //     } catch(error) {
+    //         console.error(error);
+    //     }
+    // }
+
+    // async function promiseGetComments(postID) {
+        
+    //     try {
+    //         return comments.value;
+    //     } catch(error) {
+    //         console.error(error);
+    //     }
+    // }
+
+    // document.getElementById("run").addEventListener("click", () => {
+    //     promiseGetPosts();
+    // })
 })();

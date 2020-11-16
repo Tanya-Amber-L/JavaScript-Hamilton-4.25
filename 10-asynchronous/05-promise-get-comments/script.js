@@ -10,6 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
+    // MA METHODE
     document.getElementById("run").addEventListener("click", () => {
         window.lib.getPosts().then(function(posts) {
             console.log(posts);
@@ -21,4 +22,15 @@
             });
         })
     })
+
+    //METHODE LENY
+    // document.getElementById("run").addEventListener("click", () => {
+    //     window.lib.getPosts().then(function(posts) {
+    //         Promise.all(
+    //             posts.map(post=>window.lib.getComments(post.id))
+    //         ).then(()=>{
+
+    //         })
+    //     })
+    // })
 })();

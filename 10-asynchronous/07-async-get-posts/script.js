@@ -10,16 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    async function promiseGetPosts() {
-        let posts= await window.lib.getPosts();
-        try {
-            console.log(posts);
-        } catch {
-            console.error(error);
-        }
-    }
+    
 
-    document.getElementById("run").addEventListener("click", () => {
-        promiseGetPosts();
+    document.getElementById("run").addEventListener("click", async() => {
+        let posts= await window.lib.getPosts();
+        console.log(posts);
     })
 })();

@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let inputs = Array.from(
+        document.querySelectorAll("input")
+    )
+    let template = document.getElementById("tpl-hero"); //import template to reproduce
+    let target = document.getElementById("target"); //import target, where to reproduce
+    let input = document.querySelector("#hero-id");
+    document.getElementById("run").addEventListener("click", async () => {
+        const values = inputs.map(({values})=>value.trim());
+        
+        if (values.some (
+            (val)=>val===""
+        )) {
+            console.error("empty input");
+            return
+        }
+
+        const [name, alterEgo, powers]=values;
+        const response = await fetch
+        //REVOIR CORRECTION DE LENY
+    })
 })();
