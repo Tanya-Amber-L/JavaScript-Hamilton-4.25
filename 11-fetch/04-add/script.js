@@ -9,25 +9,34 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+let inputs = Array.from(document.querySelectorAll("input"));
+
 (() => {
-    let inputs = Array.from(
-        document.querySelectorAll("input")
-    )
-    let template = document.getElementById("tpl-hero"); //import template to reproduce
-    let target = document.getElementById("target"); //import target, where to reproduce
-    let input = document.querySelector("#hero-id");
-    document.getElementById("run").addEventListener("click", async () => {
-        const values = inputs.map(({values})=>value.trim());
-        
-        if (values.some (
-            (val)=>val===""
-        )) {
-            console.error("empty input");
-            return
+    document.querySelector("#run").addEventListener("click", async () => {
+        const values = inputs.map(({value}) => value.trim());
+
+        if (values.some(val => val === "")) {
+            console.error("Empty input!");
+            return;
         }
 
-        const [name, alterEgo, powers]=values;
-        const response = await fetch
-        //REVOIR CORRECTION DE LENY
-    })
+        const [name, alterEgo, powers] = values;
+
+        const response = await fetch(`//localhost:3000/heroes`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name,
+                alterEgo,
+                abilities: powers.split(",").map(str => str.trim()),
+            }),
+        });
+
+        const reponseAllHeroes = await fetch ("//localhost:3000/heroes")
+        const allHeroes = await reponseAllHeroes.json();
+
+        console.log("All heroes:", allHeroes);
+    });
 })();

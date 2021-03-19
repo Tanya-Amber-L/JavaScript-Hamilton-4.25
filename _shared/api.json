@@ -1,18 +1,6 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Cyclops",
-      "alterEgo": "Scott Summers",
-      "abilities": ["Optic force blasts", "Master tactician"]
-    },
-    {
-      "id": 2,
-      "name": "Marvel Girl",
-      "alterEgo": "Jean Grey",
-      "abilities": ["Telekinesis", "Telepathy", "Astral projection"]
-    },
-    {
       "id": 3,
       "name": "Beast",
       "alterEgo": "Hank McCoy",
@@ -39,6 +27,22 @@
         "Cold and ice manipulation",
         "Ability to assume an enhanced physical form made of solid ice"
       ]
+    },
+    {
+      "name": "test",
+      "alterEgo": "moi",
+      "abilities": [
+        "géniale"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Tanya",
+      "alterEgo": "test",
+      "abilities": [
+        "wrwzhe sgfxzrdfv"
+      ],
+      "id": 9
     }
   ]
 }
